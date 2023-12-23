@@ -1,0 +1,622 @@
+/*
+* Lista Import
+*/
+/*
+* variables
+*/
+.container__grid {
+  display: grid;
+  grid-template-areas: "hea  head head head" "hea  mai mai mai" "hea  mai mai mai" "foo  foo foo foo";
+}
+
+.nav__aside {
+  grid-area: hea;
+}
+
+.header {
+  grid-area: head;
+}
+
+.main__content {
+  grid-area: mai;
+}
+
+.footer__content {
+  grid-area: foo;
+}
+
+/*
+*mixins front
+
+*/
+/*
+* Layout
+*/
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+main {
+  width: auto;
+  min-width: 100%;
+  margin: 0;
+}
+
+.header {
+  margin-left: 309px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #001152, #0695a9);
+  padding: 20px;
+}
+.title__presentation {
+  display: flex;
+}
+.title__presentation__word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title__presentation__word h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+}
+.title__presentation__word h3 {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+.title__presentation__word h4 {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav__aside::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+.nav__aside::-webkit-scrollbar-track {
+  background: rgb(199, 199, 199); /* color of the tracking area */
+}
+
+.nav__aside::-webkit-scrollbar-thumb {
+  background-color: #555563; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(170, 170, 170); /* creates padding around scroll thumb */
+}
+
+.foto {
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 3px 0px 0px 2px #8e8e99;
+  margin: 20px 5px 20px 0px;
+  padding: 15px;
+  padding-right: 7px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.links__svg {
+  animation-name: mianimacionrrss;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  position: relative;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@keyframes mianimacionrrss {
+  0% {
+    donw: 0;
+    top: 0px;
+  }
+  25% {
+    color: rgb(15, 114, 206);
+    donw: 10px;
+    top: 5px;
+  }
+  50% {
+    color: aliceblue;
+    donw: 20px;
+    top: 10px;
+  }
+  75% {
+    color: bisque;
+    donw: 30px;
+    top: 15px;
+  }
+  100% {
+    donw: 60px;
+    top: 0px;
+  }
+}
+
+.nav__aside {
+  background-color: cornflowerblue;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 308px;
+  background: #001152;
+  color: #fff;
+  overflow-y: auto;
+}
+.nav__aside__weight {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  text-shadow: 1px 1px gray;
+  font-weight: 700;
+  margin-right: 3px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.nav__aside__normal {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  text-shadow: 1px 1px black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #999999;
+}
+.nav__aside__text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+}
+.aside__title {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+}
+.aside__title:hover {
+  color: gray;
+}
+.aside__title svg {
+  margin-left: 10px;
+  width: 20px;
+}
+.aside__title h5 {
+  margin-left: 10px;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.aside__datos {
+  display: flex;
+  flex-direction: row;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+}
+.aside__title__contacto {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+}
+.aside__title__contacto h5 {
+  margin-left: 10px;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.aside__title__contacto__svg {
+  margin-left: 10px;
+  width: 20px;
+}
+.aside__datos {
+  display: flex;
+  flex-direction: row;
+}
+.aside__datos svg {
+  margin-left: 35px;
+  margin-right: 8px;
+  width: 14px;
+}
+.aside__datos p {
+  font-size: 12px;
+}
+
+.navBar {
+  display: none;
+}
+
+.home {
+  display: flex;
+  margin-left: 320px;
+}
+.home__article {
+  margin: 40px 40px 0px 40px;
+}
+.home__article h3 {
+  text-align: center;
+  font-weight: 900;
+  text-shadow: 1px 1px white;
+}
+.home__article p {
+  text-align: justify;
+}
+.home__article p strong {
+  color: #001152;
+}
+.home__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__article2 {
+  margin: 40px 40px 0px 40px;
+}
+.home__article2 p {
+  text-align: justify;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  margin-left: 320px;
+  padding: 20px 0px 0px 0px;
+}
+.about__image {
+  width: 300px;
+}
+.about__text {
+  display: flex;
+}
+.about__text__word {
+  display: flex;
+  flex-direction: column;
+}
+.about__text__word__1 {
+  color: gray;
+  font-weight: 800;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.about__text__word__2 {
+  color: gray;
+  font-weight: 800;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.about__text__word__3 {
+  color: #001152;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.about__text__word__4 {
+  color: gray;
+  font-size: 20px;
+}
+
+.help {
+  margin-left: 320px;
+}
+.help__text {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+.help__text h2 {
+  color: gray;
+  font-weight: 800;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.help__text__word__4 {
+  font-size: 18px;
+}
+.help__text__word__5 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #001152;
+}
+
+.help__service {
+  display: flex;
+  flex-direction: row;
+}
+.help__service__block {
+  background: linear-gradient(to right, #1f3eb6, #1f3eb6);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: column;
+  height: 200px;
+  margin: 30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 0px gray;
+}
+.help__service__block:hover {
+  background: linear-gradient(to right, #606164, #4e515f);
+  transform: scale(1.1);
+}
+.help__service__block svg {
+  width: 100%;
+  height: 50px;
+  color: white;
+}
+.help__service__block h4 {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  text-shadow: 1px 1px gray;
+}
+
+.documents {
+  display: flex;
+  margin-left: 320px;
+}
+.documents__figure {
+  margin: 40px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background-color: #001152;
+  padding: 40px;
+  border-radius: 20px;
+}
+.documents__figure__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+}
+.documents__figure__text svg {
+  width: 36px;
+  height: 36px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  animation-name: mianimacionabout;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  position: relative;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@keyframes mianimacionabout {
+  0% {
+    donw: 0;
+    top: 0px;
+  }
+  25% {
+    color: rgb(123, 4, 128);
+  }
+  50% {
+    color: aliceblue;
+  }
+  75% {
+    color: rgb(5, 119, 148);
+  }
+  100% {
+    donw: 60px;
+    top: 0px;
+  }
+}
+.documents__figure__text p {
+  padding: 10px 0px 0px 0px;
+}
+
+.aboutmas {
+  display: flex;
+  margin-left: 320px;
+}
+.aboutmas__me {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  text-align: justify;
+}
+.aboutmas__me h3 {
+  color: gray;
+  font-weight: 800;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+.aboutmas__me__textp {
+  text-align: center;
+}
+.aboutmas__me strong {
+  color: #001152;
+  font-size: 15px;
+}
+
+.footer__content {
+  background-color: black;
+  height: 20px;
+}
+
+/*
+* Media Queries
+*/
+@media (max-width: 990px) {
+  .container__grid {
+    display: grid;
+    grid-template-areas: "hea  hea hea hea" "head  head head head" "mai  mai mai mai" "foo  foo foo foo";
+  }
+  .nav__aside {
+    grid-area: hea;
+  }
+  .header {
+    grid-area: head;
+  }
+  .main__content {
+    grid-area: mai;
+  }
+  .footer__content {
+    grid-area: foo;
+  }
+  .header {
+    margin-left: 0;
+  }
+  .home {
+    display: flex;
+    margin-left: 0;
+  }
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    flex-direction: column;
+  }
+  .about__image {
+    width: 300px;
+    text-align: center;
+  }
+  .about__text {
+    margin: 20px;
+  }
+  .help {
+    margin-left: 0;
+  }
+  .help__text {
+    margin: 20px;
+  }
+  .help__service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  .help__service__block {
+    width: 250px;
+    margin: 10px 10px 0px 10px;
+    max-width: 90%;
+  }
+  .title__presentation__word {
+    display: flex;
+    justify-content: center;
+  }
+  .title__presentation__word h2 {
+    font-size: 18px;
+  }
+  .title__presentation__word h3 {
+    font-size: 13px;
+  }
+  .title__presentation__word h4 {
+    display: flex;
+    font-size: 10px;
+  }
+  .nav__aside {
+    display: flex;
+  }
+  .nav__title svg {
+    cursor: pointer;
+  }
+  .navBar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .foto {
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 780px) {
+  .container__grid {
+    display: grid;
+    grid-template-areas: "na  na na na" "hea  hea hea hea" "head  head head head" "mai  mai mai mai" "foo  foo foo foo";
+  }
+  .navBar {
+    grid-area: na;
+  }
+  .nav__aside {
+    grid-area: hea;
+  }
+  .header {
+    grid-area: head;
+  }
+  .main__content {
+    grid-area: mai;
+  }
+  .footer__content {
+    grid-area: foo;
+  }
+  .header {
+    margin-left: 0;
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+  .home p {
+    text-align: center;
+  }
+}
+@media (max-width: 440px) {
+  .container__grid {
+    display: grid;
+    grid-template-areas: "hea  hea hea hea" "head  head head head" "mai  mai mai mai" "foo  foo foo foo";
+  }
+  .nav__aside {
+    grid-area: hea;
+  }
+  .header {
+    grid-area: head;
+  }
+  .main__content {
+    grid-area: mai;
+  }
+  .footer__content {
+    grid-area: foo;
+  }
+  .header {
+    margin-left: 0;
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+  .home p {
+    text-align: justify;
+  }
+  .home__image {
+    display: flex;
+  }
+  .home__image img {
+    width: 250px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

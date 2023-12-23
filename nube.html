@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nube de palabras</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    #wordcloud {
+      width: 500px;
+      height: 500px;
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div id="wordcloud"></div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.15.0/p5.min.js"></script>
+  <script>
+    // Crea el elemento <canvas>.
+    var canvas = document.getElementById("wordcloud");
+
+    // Obtiene el contexto de 2D del elemento <canvas>.
+    var ctx = canvas.getContext("2d");
+
+    // Crea un arreglo con las 10 palabras.
+    var words = ["Hola", "Hector", "Palabra 3", "Palabra 4", "Palabra 5", "Palabra 6", "Palabra 7", "Palabra 8", "Palabra 9", "Palabra 10"];
+
+    // Asigna un tamaño aleatorio a cada palabra.
+    for (var i = 0; i < words.length; i++) {
+      var size = Math.floor(Math.random() * 200);
+      words[i] = { word: words[i], size: size };
+    }
+
+    // Dibuja la nube de palabras.
+    function drawWordCloud() {
+      for (var i = 0; i < words.length; i++) {
+        var word = words[i];
+
+        // Dibuja el texto de la palabra.
+        ctx.fillStyle = "#000000";
+        ctx.font = "16px sans-serif";
+        ctx.fillText(word.word, Math.random() * canvas.width, Math.random() * canvas.height);
+
+        // Dibuja el borde de la palabra.
+        ctx.fillStyle = "#ffffff";
+        ctx.strokeRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+
+    // Llama a la función para dibujar la nube de palabras.
+    drawWordCloud();
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+
+@media (max-width:990px){
+
+.container__grid{
+    display:grid;
+    grid-template-areas: 
+   
+    "hea  hea hea hea"
+    "head  head head head"
+    "mai  mai mai mai"
+    "foo  foo foo foo"
+    ;
+}
+
+.nav__aside{
+    grid-area: hea;
+}
+.header{
+    grid-area: head;
+}
+.main__content{
+    grid-area: mai;  
+}
+.footer__content{
+    grid-area: foo;
+}
+
+.header{
+    margin-left: 0;
+}
+.home{
+    display: flex;
+    margin-left: 0;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    flex-direction: column;
+    &__image{
+        width: 300px;
+        text-align: center;
+    }
+    &__text{
+        margin: 20px;
+    }
+
+    
+}
+.help{
+    margin-left: 0;
+    &__text{
+        margin: 20px;
+    }
+    &__service{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin:20px;
+        &__block{
+            width: 250px;
+            margin: 10px 10px 0px 10px;
+            max-width: 90%;
+        }
+    }
+}
+.title__presentation__word{
+    display: flex;
+    justify-content: center;
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 13px;
+    }
+    h4{
+        display: flex;
+        font-size: 10px;
+    }
+}
+
+ .nav__aside {
+    display: flex;
+ 
+
+  }
+ 
+
+  .nav__title svg {
+    cursor: pointer;
+  }
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+.foto{
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 0;
+}
+
+}
+
