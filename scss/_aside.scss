@@ -13,13 +13,22 @@
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid rgb(170, 170, 170);  /* creates padding around scroll thumb */
 }
-
+.nav__aside__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+&Name{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+}
 .foto{
     height: 300px;
     border-radius: 50%;
     box-shadow: 3px 0px 0px 2px #8e8e99;
     //padding: 30px;
-    margin: 20px 5px 20px 0px;
+    margin: 20px 15px 20px 0px;
     // width: 300px;
     padding: 15px; 
     padding-right: 7px;
@@ -49,9 +58,9 @@
                  margin-bottom: 10px;
                  @keyframes mianimacionrrss{
                  0% {donw:0;top:0px;}
-                 25%{color:rgb(15, 114, 206);donw:10px;top:5px;}
-                 50% {color:aliceblue; donw:20px;top:10px;}
-                 75% {color:bisque; donw:30px;top:15px;}
+                 25%{color:rgb(15, 114, 206);}
+                 50% {color:aliceblue; }
+                 75% {color:bisque; }
                  100% {donw:60px;top:0px;}
                  }
 

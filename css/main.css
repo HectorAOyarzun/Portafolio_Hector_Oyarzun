@@ -75,18 +75,18 @@ main {
 }
 .title__presentation__word h2 {
   color: white;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 25px;
 }
 .title__presentation__word h3 {
   color: white;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 20px;
 }
 .title__presentation__word h4 {
-  color: white;
+  color: rgb(199, 199, 199);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .nav__aside::-webkit-scrollbar {
@@ -103,11 +103,22 @@ main {
   border: 3px solid rgb(170, 170, 170); /* creates padding around scroll thumb */
 }
 
+.nav__aside__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav__aside__titleName {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .foto {
   height: 300px;
   border-radius: 50%;
   box-shadow: 3px 0px 0px 2px #8e8e99;
-  margin: 20px 5px 20px 0px;
+  margin: 20px 15px 20px 0px;
   padding: 15px;
   padding-right: 7px;
 }
@@ -134,18 +145,12 @@ main {
   }
   25% {
     color: rgb(15, 114, 206);
-    donw: 10px;
-    top: 5px;
   }
   50% {
     color: aliceblue;
-    donw: 20px;
-    top: 10px;
   }
   75% {
     color: bisque;
-    donw: 30px;
-    top: 15px;
   }
   100% {
     donw: 60px;
@@ -248,8 +253,30 @@ main {
   font-size: 12px;
 }
 
-.navBar {
+.navbar {
   display: none;
+}
+
+.bg-dark {
+  background-color: #001152 !important;
+}
+
+.offcanvas {
+  background-color: #001152 !important;
+}
+
+.offcanvas-body::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+.offcanvas-body::-webkit-scrollbar-track {
+  background: rgb(199, 199, 199); /* color of the tracking area */
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+  background-color: #555563; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(170, 170, 170); /* creates padding around scroll thumb */
 }
 
 .home {
@@ -466,7 +493,10 @@ main {
 @media (max-width: 990px) {
   .container__grid {
     display: grid;
-    grid-template-areas: "hea  hea hea hea" "head  head head head" "mai  mai mai mai" "foo  foo foo foo";
+    grid-template-areas: "na na na na" "hea  hea hea hea" "head  head head head" "mai  mai mai mai" "foo  foo foo foo";
+  }
+  .navbar {
+    grid-area: na;
   }
   .nav__aside {
     grid-area: hea;
@@ -480,8 +510,12 @@ main {
   .footer__content {
     grid-area: foo;
   }
+  aside {
+    display: none;
+  }
   .header {
     margin-left: 0;
+    margin-top: 50px;
   }
   .home {
     display: flex;
@@ -533,33 +567,48 @@ main {
     display: flex;
     font-size: 10px;
   }
-  .nav__aside {
+  /*.nav__aside__hidden{
+      content-visibility: hidden;
+      display: none;
+  }*/
+  .navbar {
+    content-visibility: visible;
+    visibility: visible;
     display: flex;
   }
   .nav__title svg {
     cursor: pointer;
   }
-  .navBar {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
   .foto {
-    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
     border-radius: 50%;
     box-shadow: none;
     margin: 0;
     padding: 0;
     padding-right: 0;
+    width: 200px;
+  }
+  .nav__aside__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .nav__aside__titleName {
+    margin-bottom: 20px;
+  }
+  .documents {
+    display: flex;
+    margin-left: 0;
   }
 }
 @media (max-width: 780px) {
   .container__grid {
     display: grid;
-    grid-template-areas: "na  na na na" "hea  hea hea hea" "head  head head head" "mai  mai mai mai" "foo  foo foo foo";
-  }
-  .navBar {
-    grid-area: na;
+    grid-template-areas: "hea  hea hea hea" "head  head head head" "mai  mai mai mai" "foo  foo foo foo";
   }
   .nav__aside {
     grid-area: hea;
