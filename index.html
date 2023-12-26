@@ -211,7 +211,6 @@
                     </svg>
                     <p>hector.oyarzun.mu@gmail.com</p>
                     </article>
-               
             </section>
             <section class="aside">
                 <a class="aside__title" href="#"> 
@@ -265,7 +264,10 @@
                     <h4>Relatoría | Asesoría Freelance | Instructor |Desarrollo Web </h4>
                     </div>
                 </article>
+
+          
             </section>
+            
     </header>
     <main class="main__content">
         <section class="home">
@@ -290,6 +292,14 @@
                           o la confección de documentos específicos requeridos por el OAL, no hay problema,
                           <strong> contáctame y conversemos.</strong> </p>
             </article>
+      </section>
+      <section class="callme">
+        <a class=" btn  callme__button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <p>Contáctame</p>
+        </a>
+            
+        
+
       </section>
 
 
@@ -347,26 +357,12 @@
                             <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/>
                         </svg>
                           <h4>Protocolos MINSAL</h4>
-                    </div>
+                    </div>--> 
 
 
-                      <div class="help__service__block" >
-                       <a  class="btn type__service__text__button" data-bs-toggle="modal" data-bs-target="#exampleModal">               
-      
-       
          
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-          </svg>
-         
-     
-        
-                         <h4>Otros documentos</h4>
-                         </a>
-                    </div>
 
-                </article>-->      
+                </article>     
            
 
 
@@ -375,25 +371,46 @@
          <div class="modal-dialog modal-dialog-scrollable">
            <div class="modal-content" style="background-color: #f5f5dce3;">
               <div class="modal-header type__service__modal">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">RIOHS</h1>
+                <h1 class="modal-title fs-5 style-form" id="exampleModalLabel">FORMULARIO DE CONTACTO</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
                   <div class="modal-body type__service__body">
-                    <h4>¿Qué es el reglamento interno de orden, higiene y seguridad?</h4>
-                      <p>El reglamento interno de orden, higiene y seguridad es el instrumento
-                         administrativo por medio del cual el empleador regula los requisitos, 
-                         obligaciones, prohibiciones y sanciones, al que deben sujetarse todos 
-                          los trabajadores(as), en relación con sus labores, permanencia y vida 
-                          en la empresa. La elaboración de dicho instrumento, es obligatoria 
-                          para todas aquellas empresas que posean normalmente 10 o más 
-                          trabajadores permanentes. Dicha obligación se encuentra establecida 
-                          en el artículo N° 153 del Código del Trabajo.
-                          Cabe señalar, que el empleador está obligado a entregar gratuitamente
-                          un ejemplar del Reglamento Interno a cada uno de los trabajadores.
-                        </p>                  
+<section id="section">
+  <form action="https://formsubmit.co/hectorcevalogistic@gmail.com" method="POST">
+  
+
+  <div class="campo">
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre" required>
+  </div>
+
+  <div class="campo">
+    <label for="mail">Correo electrónico</label>
+    <input type="email" name="mail" id="correo" required>
+  </div>
+
+  <div class="campo">
+    <label for="asunto">Asunto</label>
+    <input type="text" name="asunto" id="asunto" required>
+  </div>
+
+  <div class="campo">
+    <label for="mensaje">Mensaje</label>
+    <textarea name="mensaje" id="mensaje" required></textarea>
+  </div>
+
+  <input type="submit" value="Enviar">
+    <input type="hidden" name="_next" value="https://hectoraoyarzun.github.io/Portafolio_Hector_Oyarzun/pages/experiencia.html">
+  <input type="hidden" name="_captcha" value="false">
+  </form>
+</section>
+                    
+
+
+
                     </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" hidden>Close</button>
                           <button type="button" class="btn btn-primary" hidden>Save changes</button>
                       </div>
               </div>  

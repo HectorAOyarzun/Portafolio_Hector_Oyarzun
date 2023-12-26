@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 * Lista Import
 */
@@ -29,6 +30,72 @@
 *mixins front
 
 */
+/*
+Hace que las cosas roten en 360 grados, usa rotateX😀
+*/
+#imagen {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.rotador {
+  animation: rotar 36s linear infinite;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*
+Hace que las cosas floten suavemente, usa rotateX😀
+*/
+#imagen {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.flotador {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: flotar 5s ease-in-out infinite alternate;
+}
+
+@keyframes flotar {
+  from {
+    top: 0;
+  }
+  to {
+    top: 40px;
+  }
+}
+/*
+Hace que el color cambie suavemente, usa rotateX😀
+*/
+#frase {
+  font-size: 30px;
+  color: #1084b3;
+}
+
+#frase {
+  animation: cambiarColor 5s ease-in-out infinite alternate;
+}
+
+@keyframes cambiarColor {
+  from {
+    color: #1084b3;
+  }
+  to {
+    color: gray;
+  }
+}
 /*
 * Layout
 */
@@ -309,6 +376,45 @@ main {
   text-align: justify;
 }
 
+#imagen {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.flotador {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: flotar 5s ease-in-out infinite alternate;
+}
+
+@keyframes flotar {
+  from {
+    top: 0;
+  }
+  to {
+    top: 50px;
+  }
+}
+#frase {
+  font-size: 30px;
+  color: #1084b3;
+}
+
+#frase {
+  animation: cambiarColor 5s ease-in-out infinite alternate;
+}
+
+@keyframes cambiarColor {
+  from {
+    color: #1084b3;
+  }
+  to {
+    color: gray;
+  }
+}
 .about {
   display: flex;
   flex-direction: row;
@@ -326,23 +432,27 @@ main {
   flex-direction: column;
 }
 .about__text__word__1 {
-  color: gray;
+  color: #001152;
   font-weight: 800;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .about__text__word__2 {
-  color: gray;
+  color: #1084b3;
   font-weight: 800;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 45px;
 }
 .about__text__word__3 {
-  color: #001152;
+  color: #1084b3;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .about__text__word__4 {
-  color: gray;
+  color: #001152;
   font-size: 20px;
+}
+.about__text__word__5 strong {
+  font-weight: bolder;
+  color: #1084b3;
 }
 
 .help {
@@ -375,9 +485,9 @@ main {
   background: linear-gradient(to right, #1f3eb6, #1f3eb6);
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 70%;
   flex-direction: column;
-  height: 200px;
+  height: auto;
   margin: 30px;
   border-radius: 5px;
   box-shadow: 1px 1px 3px 0px gray;
@@ -673,6 +783,74 @@ main {
   text-shadow: 1px 1px 1px gray;
 }
 
+.callme {
+  display: flex;
+  margin-left: 350px;
+  background-color: rgb(0, 130, 134);
+  width: 200px;
+}
+.callme:hover {
+  background-color: rgb(0, 51, 51);
+}
+.callme__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 18px 0px 5px 0px;
+}
+.callme__button p {
+  color: white;
+  font-weight: 900;
+}
+
+form {
+  width: 100%;
+}
+
+.campo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.campo {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type=submit] {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.style-form {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-weight: 900;
+  font-family: serif;
+}
+
 .footer__content {
   height: 100px;
 }
@@ -806,6 +984,13 @@ main {
   .ruleta {
     margin-left: 0;
     margin-top: 80px;
+  }
+  .callme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 120px;
+    margin-right: 100px;
   }
 }
 @media (max-width: 780px) {

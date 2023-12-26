@@ -22,4 +22,72 @@
 
 */
 
+/*
+Hace que las cosas roten en 360 grados, usa rotateX😀
+*/
+  #imagen {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+    }
 
+    .rotador {
+      animation: rotar 36s linear infinite;
+    }
+
+    @keyframes rotar {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+/*
+Hace que las cosas floten suavemente, usa rotateX😀
+*/
+
+    #imagen {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.flotador {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  animation: flotar 5s ease-in-out infinite alternate;
+}
+
+@keyframes flotar {
+  from {
+    top: 0;
+  }
+  to {
+    top: 40px;
+  }
+}
+
+/*
+Hace que el color cambie suavemente, usa rotateX😀
+*/
+   #frase {
+      font-size: 30px;
+      color: #1084b3;
+    }
+
+    #frase {
+      animation: cambiarColor 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes cambiarColor {
+      from {
+        color: #1084b3;
+      }
+      to {
+        color: gray;
+      }
+    }

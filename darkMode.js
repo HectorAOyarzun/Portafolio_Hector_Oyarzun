@@ -1,21 +1,28 @@
-var canvas = document.getElementById("wordcloud");
-var ctx = canvas.getContext("2d");
+function validarFormulario() {
+  // Validar el nombre
+  var nombre = document.getElementById("nombre").value;
+  if (nombre === "") {
+    alert("Debes introducir tu nombre.");
+    return false;
+  }
 
-var words = ["Palabra 1", "Palabra 2", "Palabra 3", "Palabra 4", "Palabra 5"];
-var sizes = [100, 75, 50, 25, 10];
+  // Validar el correo electrónico
+  var correo = document.getElementById("correo").value;
+  var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!regex.test(correo)) {
+    alert("El correo electrónico no es válido.");
+    return false;
+  }
 
-// Dibuja cada palabra en la nube.
-for (var i = 0; i < words.length; i++) {
-  var word = words[i];
-  var size = sizes[i];
+  // Validar el mensaje
+  var mensaje = document.getElementById("mensaje").value;
+  if (mensaje === "") {
+    alert("Debes introducir un mensaje.");
+    return false;
+  }
 
-  // Dibuja el texto de la palabra.
-  ctx.fillStyle = "#000000";
-  ctx.font = "16px sans-serif";
-  ctx.fillText(word, Math.random() * canvas.width, Math.random() * canvas.height);
-
-  // Dibuja el borde de la palabra.
-  ctx.fillStyle = "#ffffff";
-  ctx.strokeRect(0, 0, canvas.width, canvas.height);
+  return true;
 }
 
+// Asociar el evento de clic al botón de envío
+document.getElementById("enviar").addEventListener("click", validarFormulario);
