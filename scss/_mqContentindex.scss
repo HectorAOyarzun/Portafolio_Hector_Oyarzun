@@ -57,6 +57,7 @@ aside{
     margin-left: 0;
     &__text{
         margin: 20px;
+        text-align: center;
     }
     &__service{
         display: flex;
@@ -130,6 +131,14 @@ aside{
 .documents{
     display: flex;
     margin-left: 0;
+}
+.aboutmas{
+    display: flex;
+    margin-left: 0;
+}
+.CV{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 }

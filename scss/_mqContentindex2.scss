@@ -34,7 +34,61 @@
         text-align: center;
     }
 }
+.documents{
+    display: flex;
+
+    &__figure{
+        display: flex;
+        flex-direction: column;
+    }
 }
+.CV{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.experience{
+    margin-left: 0;
+    margin-right: 10px;
+}
+.professional{
+    margin-left: 0;
+    margin-right: 10px;
+    &__text{
+        margin-left: 0;
+    }
+}
+.education{
+    margin-left: 0;
+     margin-right: 10px;
+    &__text{
+        margin-left: 0;
+    }
+}
+.skills{
+    margin-left: 0;
+     margin-right: 10px;
+}
+.navmenu{
+    margin-left: 0;
+    padding-left: 0;
+}
+.experience__title{
+    display: flex;
+    flex-direction: column;
+    &__contacts{
+        padding: 30px 0px 0px 0px;
+    }
+}
+
+
+}
+
+
+
+
+
+
+
 
 @media (max-width:440px){
 
@@ -77,4 +131,5 @@
         }
     }
 }
+
 }

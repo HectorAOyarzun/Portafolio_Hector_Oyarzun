@@ -334,6 +334,7 @@ main {
   color: gray;
   font-weight: 800;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 45px;
 }
 .about__text__word__3 {
   color: #001152;
@@ -482,6 +483,184 @@ main {
   font-size: 15px;
 }
 
+.CV {
+  background-color: #ffffff;
+  margin-left: 350px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  box-shadow: -1px 1px 6px 9px rgba(128, 128, 128, 0.2901960784);
+  padding-top: 40px;
+  padding-left: 20px;
+}
+
+.navmenu {
+  display: flex;
+  padding-left: 20px;
+  margin-left: 20px;
+  align-items: center;
+}
+.navmenu ul {
+  display: flex;
+  justify-content: space-around;
+}
+.navmenu a {
+  margin: 0px 10px 0px 0px;
+  color: #001153;
+  font-weight: 900;
+  font-size: 13px;
+}
+.navmenu a:hover {
+  color: rgb(138, 129, 2);
+  font-weight: 900;
+}
+
+.experience {
+  display: flex;
+  margin-left: 20px;
+}
+.experience__title {
+  display: flex;
+}
+.experience__title__text {
+  display: flex;
+  flex-direction: column;
+}
+.experience__title__text h7 {
+  display: flex;
+  color: gray;
+  font-weight: 700;
+}
+.experience__title__text__name {
+  color: #001153;
+  font-weight: 900;
+  font-family: fantasy;
+  font-size: 2.75rem;
+  letter-spacing: 0.4rem;
+  text-shadow: 1px 1px 0px gray;
+}
+.experience__title__contacts {
+  display: flex;
+  padding: 30px;
+}
+.experience__title__contacts__svg {
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid #001153;
+  padding: 20px;
+}
+.experience__title__contacts__svg__links {
+  text-decoration: none;
+  color: #001153;
+}
+.experience__title__contacts__svg h6 {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.professional {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.professional__title h4 {
+  letter-spacing: 0.35px;
+  color: #001153;
+  font-weight: 800;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-left: 4px solid #001153;
+  padding-left: 20px;
+}
+.professional__text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.professional__text__position {
+  display: flex;
+  font-weight: 900;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+}
+.professional__text__company {
+  display: flex;
+  margin: 0;
+}
+.professional__text__age {
+  display: flex;
+  font-size: 10px;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.education__title h4 {
+  letter-spacing: 0.35px;
+  color: #001153;
+  font-weight: 800;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-left: 4px solid #001153;
+  padding-left: 20px;
+}
+.education__text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.education__text__titulo {
+  display: flex;
+  font-weight: 900;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+}
+.education__text__institute {
+  display: flex;
+  margin: 0;
+}
+.education__text__age {
+  display: flex;
+  font-size: 10px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.skills__title h4 {
+  letter-spacing: 0.35px;
+  color: #001153;
+  font-weight: 800;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-left: 4px solid #001153;
+  padding-left: 20px;
+}
+.skills__item {
+  margin-bottom: 15px;
+  overflow: hidden;
+  padding: 0px 50px 0px 50px;
+}
+.skills__level-title {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.skills__level-bar {
+  height: 12px;
+  background: #868686;
+}
+.skills__level-bar-inner {
+  height: 12px;
+  background: #001153;
+}
+
 .footer__content {
   background-color: black;
   height: 20px;
@@ -540,6 +719,7 @@ main {
   }
   .help__text {
     margin: 20px;
+    text-align: center;
   }
   .help__service {
     display: flex;
@@ -604,6 +784,14 @@ main {
     display: flex;
     margin-left: 0;
   }
+  .aboutmas {
+    display: flex;
+    margin-left: 0;
+  }
+  .CV {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 @media (max-width: 780px) {
   .container__grid {
@@ -631,6 +819,50 @@ main {
   }
   .home p {
     text-align: center;
+  }
+  .documents {
+    display: flex;
+  }
+  .documents__figure {
+    display: flex;
+    flex-direction: column;
+  }
+  .CV {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .experience {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .professional {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .professional__text {
+    margin-left: 0;
+  }
+  .education {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .education__text {
+    margin-left: 0;
+  }
+  .skills {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .navmenu {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .experience__title {
+    display: flex;
+    flex-direction: column;
+  }
+  .experience__title__contacts {
+    padding: 30px 0px 0px 0px;
   }
 }
 @media (max-width: 440px) {
