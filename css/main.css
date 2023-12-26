@@ -661,6 +661,18 @@ main {
   background: #001153;
 }
 
+.ruleta {
+  margin-left: 240px;
+}
+
+.title__game {
+  display: flex;
+  justify-content: center;
+  text-decoration: center;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px gray;
+}
+
 .footer__content {
   background-color: black;
   height: 20px;
@@ -791,6 +803,10 @@ main {
   .CV {
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .ruleta {
+    margin-left: 0;
+    margin-top: 80px;
   }
 }
 @media (max-width: 780px) {
