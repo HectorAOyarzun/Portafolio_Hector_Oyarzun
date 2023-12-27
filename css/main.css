@@ -830,6 +830,13 @@ main {
   text-shadow: 1px 1px 1px gray;
 }
 
+.call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .callme {
   display: flex;
   margin-left: 350px;
