@@ -11,12 +11,23 @@
      
     &__article{
         margin: 40px 40px 0px 40px;
+    &__one{
+        color:#1084b3;
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    &__two{
+        color:#1084b3;
+        font-size: 30px;
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
         
         h3{
             //margin: 0px 190px 0px 0px;
             text-align: center;
             font-weight: 900;
             text-shadow: 1px 1px white;
+            
         }
         p{
             

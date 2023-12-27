@@ -68,9 +68,15 @@
                 flex-direction: column;
                 border-left: 4px solid #001153;
                 padding: 20px;
+                &:hover{
+                    color:#868686;
+                }
             &__links{
                 text-decoration: none;
                 color:#001153;
+                &:hover{
+                    color:#868686;
+                }
                 
             }
                 h6{

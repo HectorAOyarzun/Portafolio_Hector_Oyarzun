@@ -47,3 +47,26 @@ main{
         }
     }
 }
+
+.puntos {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 2px;
+  
+}
+
+.punto {
+  width: 10px;
+  height: 10px;
+   background: linear-gradient(to right, #303030, #727272ed, #3a3a3a9e);
+ background-color: rgb(104, 103, 103);
+  border-radius: 50px;
+  margin: 2px;
+   
+}
+ 
+
+
+             

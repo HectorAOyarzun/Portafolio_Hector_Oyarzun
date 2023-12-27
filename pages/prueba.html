@@ -7,77 +7,89 @@
   <title>Document</title>
 </head>
 <style>
-  body {
-  font-family: sans-serif;
+
+.challa-container {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
 }
 
-form {
-  width: 500px;
-  margin: 0 auto;
+.challa {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: caer 2s infinite;
+  margin-left: 10px;
 }
 
-.campo {
-  margin-bottom: 10px;
+@keyframes caer {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  100% {
+    top: 200px;
+    left: 200px;
+  }
 }
 
-label {
-  display: block;
-  font-weight: bold;
-}
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
 
-textarea {
-  resize: none;
-}
-
-input[type="submit"] {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  cursor: pointer;
-}
 
 
 </style>
 <body id="body">
 
-  <section id="section">
-  <form action="https://formsubmit.co/hectorcevalogistic@gmail.com" method="POST">
-  <h1>Formulario de contacto</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checklist</title>
+</head>
+<body>
+ <div class="challa-container"></div>
+  <script>
+window.onload = function() {
+  // Crea las challas
+  var challas = [];
+  for (var i = 0; i < 100; i++) {
+    var challa = document.createElement("div");
+    challa.classList.add("challa");
+    challas.push(challa);
+    document.querySelector(".challa-container").appendChild(challa);
+  }
 
-  <div class="campo">
-    <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" id="nombre" required>
-  </div>
+  // Inicia la animación
+  for (var i = 0; i < challas.length; i++) {
+    challas[i].classList.add("animado");
+  }
 
-  <div class="campo">
-    <label for="mail">Correo electrónico</label>
-    <input type="email" name="mail" id="correo" required>
-  </div>
+  // Agrega un evento de escucha para detectar cuando una challa llega al fondo
+  window.addEventListener("scroll", function() {
+    var challasAlFondo = document.querySelectorAll(".challa.animado:nth-child(-1)");
+    for (var i = 0; i < challasAlFondo.length; i++) {
+      challasAlFondo[i].classList.remove("animado");
+      challasAlFondo[i].remove();
+    }
+  });
+};
 
-  <div class="campo">
-    <label for="asunto">Asunto</label>
-    <input type="text" name="asunto" id="asunto" required>
-  </div>
 
-  <div class="campo">
-    <label for="mensaje">Mensaje</label>
-    <textarea name="mensaje" id="mensaje" required></textarea>
-  </div>
-
-  <input type="submit" value="Enviar">
-    <input type="hidden" name="_next" value="https://hectoraoyarzun.github.io/Portafolio_Hector_Oyarzun/pages/experiencia.html">
-  <input type="hidden" name="_captcha" value="false">
-  </form>
-</section>
-
+  </script>
 </body>
 </html>
+
+
+
+
+
+ 
+
+
 
 
 

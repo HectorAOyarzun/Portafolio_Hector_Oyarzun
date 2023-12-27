@@ -58,9 +58,9 @@
                  margin-bottom: 10px;
                  @keyframes mianimacionrrss{
                  0% {donw:0;top:0px;}
-                 25%{color:rgb(15, 114, 206);}
-                 50% {color:aliceblue; }
-                 75% {color:bisque; }
+                 25%{color:rgb(15, 114, 206);donw:10px;top:5px;}
+                 50% {color:aliceblue; donw:20px;top:10px;}
+                 75% {color:bisque; donw:30px;top:15px;}
                  100% {donw:60px;top:0px;}
                  }
 
@@ -129,6 +129,14 @@ flex-direction: column;
 &__datos{
     display: flex;
     flex-direction: row;
+    &__links{
+        display: flex;
+        color:white;
+        text-decoration: none;
+        &:hover{
+            color:#02ffff;
+        }
+    }
 }
 }
 
