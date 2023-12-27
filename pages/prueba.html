@@ -51,32 +51,38 @@
   <title>Checklist</title>
 </head>
 <body>
- <div class="challa-container"></div>
+ 
+
+
   <script>
-window.onload = function() {
-  // Crea las challas
-  var challas = [];
-  for (var i = 0; i < 100; i++) {
-    var challa = document.createElement("div");
-    challa.classList.add("challa");
-    challas.push(challa);
-    document.querySelector(".challa-container").appendChild(challa);
-  }
+ 
+ // Crea la variable de la cookie
+    let nombreUsuario = "";
 
-  // Inicia la animación
-  for (var i = 0; i < challas.length; i++) {
-    challas[i].classList.add("animado");
-  }
+    // Escucha el evento click del botón de aceptar
+    window.addEventListener("load", function() {
+      // Muestra el mensaje emergente
+      Swal.fire({
+        title: "Cookies",
+        text: "Al utilizar este sitio web, aceptas el uso de cookies.",
+        icon: "info",
+        buttons: ["Aceptar", "Rechazar"],
+      }).then((result) => {
+        // Si el usuario acepta, establece la cookie
+        if (result.value) {
+          nombreUsuario = "Héctor Oyarzún";
 
-  // Agrega un evento de escucha para detectar cuando una challa llega al fondo
-  window.addEventListener("scroll", function() {
-    var challasAlFondo = document.querySelectorAll(".challa.animado:nth-child(-1)");
-    for (var i = 0; i < challasAlFondo.length; i++) {
-      challasAlFondo[i].classList.remove("animado");
-      challasAlFondo[i].remove();
-    }
-  });
-};
+          // Establece la duración de la cookie
+          // (1 año en segundos)
+          let duracion = 31536000;
+
+          // Envia la cookie al navegador
+          document.cookie = "nombreUsuario=" + nombreUsuario + "; expires=" + new Date(new Date().getTime() + duracion) + "; path=/";
+        }
+      });
+    });
+
+
 
 
   </script>

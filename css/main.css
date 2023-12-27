@@ -7,7 +7,7 @@
 */
 .container__grid {
   display: grid;
-  grid-template-areas: "hea  head head head" "hea  mai mai mai" "hea  mai mai mai" "foo  foo foo foo";
+  grid-template-areas: "hea  head head head" "hea  mai mai mai" "hea  mai mai mai" "hea  foo foo foo";
 }
 
 .nav__aside {
@@ -839,9 +839,10 @@ main {
 
 .callme {
   display: flex;
-  margin-left: 350px;
+  margin-left: 320px;
   background-color: rgb(0, 130, 134);
-  width: 200px;
+  padding: 0px 30px 0px 30px;
+  border-radius: 10px;
 }
 .callme:hover {
   background-color: rgb(0, 51, 51);
@@ -903,6 +904,47 @@ input[type=submit] {
   width: 100%;
   font-weight: 900;
   font-family: serif;
+}
+
+.politica {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 250px;
+  padding: 20px;
+}
+.politica__title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.politica__title h4 {
+  font-weight: 900;
+}
+.politica__secondary {
+  display: flex;
+  justify-content: start;
+  margin-left: 80px;
+  flex-direction: column;
+}
+.politica__secondary h7 {
+  font-weight: 900;
+}
+
+.footer__content__politica {
+  display: flex;
+  flex-direction: column;
+  margin-left: 350px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.footer__content__politica a {
+  justify-content: center;
+  font-size: 14px;
+}
+.footer__content__politica p {
+  justify-content: center;
+  font-size: 14px;
 }
 
 .footer__content {
@@ -1039,12 +1081,45 @@ input[type=submit] {
     margin-left: 0;
     margin-top: 80px;
   }
+  .call {
+    display: flex;
+  }
   .callme {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 80px;
-    margin-right: 100px;
+    margin-left: 0;
+  }
+  .politica {
+    display: flex;
+    margin-left: 0;
+  }
+  .politica__secondary {
+    margin-left: 0;
+  }
+  .politica__secondary h7 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .footer__content__politica {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .footer__content__politica a {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .footer__content__politica p {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
   }
 }
 @media (max-width: 780px) {
